@@ -16,9 +16,11 @@ import java.net.URL;
 @RequestMapping("/convert/from/RUB/to/USD")
 public class publicBalancer {
     private int producer_id = 1;
+    
+    private int producers_total_cnt = 3;
 
     private void next_producer_id() {
-        producer_id = producer_id % 3 + 1;
+        producer_id = producers_total_cnt % 3 + 1;
     }
 
     @GetMapping("/")
